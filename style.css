@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background: #111;
+}
+
+.container {
+    width: 90vw;
+    height: 90vh;
+    margin: auto;
+    margin-top: 5vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    border: 1px solid #333;
+    border-radius: 3%;
+    animation: box-shadow 3s linear infinite;
+}
+
+.container:hover {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.8)
+    )
+    ,url("gatitofeliz.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.container .feliz, .container .cumple {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2em;
+    text-shadow: 0 0 5px #5afa, 0 0 10px #5af8;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.regalo {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.container:hover .regalo {
+    opacity: 0;
+}
+
+p {
+    font-size: 2em;
+    color: #ccc5;
+}
+
+h3 {
+    animation: opacidad 3s linear infinite;
+    animation: color 3s linear infinite;
+}
+
+
+@keyframes opacidad {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.7;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes color {
+    0% {
+        color: #58e;
+    }
+    25%{
+        color: #3ae;
+    }
+    50% {
+        color: #4ff;
+    }
+    100% {
+        color: #58e;
+    }
+}
+
+@keyframes box-shadow {
+    0%{
+        box-shadow: 0 0 10px #4ff, 0 0 20px #4ff8;
+    }
+    25% {
+        box-shadow: 0 0 10px #3ae, 0 0 20px #3ae8;
+    }
+    50% {
+        box-shadow: 0 0 10px #58e, 0 0 20px #58e8;
+    }
+    100% {
+        box-shadow: 0 0 10px #4ff, 0 0 20px #4ff8;
+    }
+}
+
+@media (min-width: 400px) {
+    .container {
+        flex-direction: column;
+        border-radius: 30px;
+    }
+    .container:hover {
+        background-position-y: 70%;
+    }
+
+    .container .feliz, .container .cumple {
+        flex-direction: row;
+        width: 60%;
+        height: 100%;
+    }
+    .container .cumple {
+        width: 70%;
+    }
+}
